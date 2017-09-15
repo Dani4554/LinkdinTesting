@@ -33,7 +33,7 @@ var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 
 
-document.getElementById("snap").addEventListener("click", function() {
+document.getElementById("snap").addEventListener("click", function(snapShot) {
   context.drawImage(video, 0, 0, 640, 480);
-  console.log(click);
+  console.log(snapShot);
 });
