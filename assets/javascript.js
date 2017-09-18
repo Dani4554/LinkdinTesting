@@ -39,4 +39,18 @@ var context = canvas.getContext('2d');
 document.getElementById("snap").addEventListener("click", function(snapShot) {
   context.drawImage(video, 0, 0, 640, 480);
   console.log(snapShot);
+  convertCanvasToImage(canvas);
+
 });
+
+
+function convertCanvasToImage(canvas) {
+    var image = new Image();
+    var imageSrc = canvas.toDataURL("image/png");
+    console.log(imageSrc);
+    image.src = imageSrc;   
+    console.log(image)
+    return image;
+    document.querySelector("body").appendChild(image)
+    // faceRecognition(imageSrc)
+}
