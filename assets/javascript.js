@@ -46,6 +46,8 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
 
 
  function faceRecognition(image) {
+
+      console.log("Image: " + image);
         var params = {
             
         };
