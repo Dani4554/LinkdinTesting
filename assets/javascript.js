@@ -81,11 +81,11 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
 
 function convertCanvasToImage(canvas) {
     var image = new Image();
-    var imageSrc = canvas.toDataURL("image/jpg");
-    console.log(imageSrc);
+    var image.src = canvas.toDataURL("image/jpg");
+    console.log(image.src);
     // image.src = imageSrc;   
     //console.log(image.attr('src'))
     // return image;
     document.querySelector("body").appendChild(image)
-    faceRecognition(imageSrc)
+    faceRecognition(image.src)
 }
