@@ -1,6 +1,6 @@
 // Grab elements, create settings, etc.
 var video = document.getElementById('video');
-
+var image1;
 // Get access to the camera!
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     // Not adding `{ audio: true }` since we only want video now
@@ -39,9 +39,40 @@ var context = canvas.getContext('2d');
 document.getElementById("snap").addEventListener("click", function(snapShot) {
   context.drawImage(video, 0, 0, 640, 480);
   console.log(snapShot);
-  convertCanvasToImage(canvas);
+  image1 = convertCanvasToImage(canvas);
 
 });
+
+
+
+ $(function() {
+        var params = {
+            
+        };
+
+        $.ajax({
+            // NOTE: You must use the same location in your REST call as you used to obtain your subscription keys.
+            //   For example, if you obtained your subscription keys from westcentralus, replace "westus" in the 
+            //   URL below with "westcentralus".
+            url: "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+
+                // NOTE: Replace the "Ocp-Apim-Subscription-Key" value with a valid subscription key.
+                xhrObj.setRequestHeader("c1b9625c10a544cc9ff07f21be4238ca","13hc77781f7e4b19b5fcdd72a8df7156");
+            },
+            type: "POST",
+            // Request body
+            data: image1,
+        })
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
 
 
 function convertCanvasToImage(canvas) {
