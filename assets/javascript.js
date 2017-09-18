@@ -39,16 +39,18 @@ var context = canvas.getContext('2d');
 document.getElementById("snap").addEventListener("click", function(snapShot) {
   context.drawImage(video, 0, 0, 640, 480);
   console.log(snapShot);
-  image1 = convertCanvasToImage(canvas);
+  convertCanvasToImage(canvas);
 
 });
 
 
 
- $(function() {
+ function faceRecognition(image) {
         var params = {
             
         };
+
+        var queryURL = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?" + 
 
         $.ajax({
             // NOTE: You must use the same location in your REST call as you used to obtain your subscription keys.
@@ -64,7 +66,7 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
             },
             type: "POST",
             // Request body
-            data: image1,
+            data: image,
         })
         .done(function(data) {
             alert("success");
@@ -72,16 +74,16 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
         .fail(function() {
             alert("error");
         });
-    });
+    };
 
 
 function convertCanvasToImage(canvas) {
     var image = new Image();
-    var imageSrc = canvas.toDataURL("image/png");
+    var imageSrc = canvas.toDataURL("image/jpg");
     console.log(imageSrc);
-    image.src = imageSrc;   
-    console.log(image)
-    return image;
+    // image.src = imageSrc;   
+    console.log(image.attr('src'))
+    // return image;
     document.querySelector("body").appendChild(image)
-    // faceRecognition(imageSrc)
+    faceRecognition(imageSrc)
 }
