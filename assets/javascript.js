@@ -62,7 +62,7 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
                 xhrObj.setRequestHeader("Content-Type","application/json");
 
                 // NOTE: Replace the "Ocp-Apim-Subscription-Key" value with a valid subscription key.
-                xhrObj.setRequestHeader("c1b9625c10a544cc9ff07f21be4238ca","13hc77781f7e4b19b5fcdd72a8df7156");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","c1b9625c10a544cc9ff07f21be4238ca");
             },
             type: "POST",
             // Request body
@@ -82,7 +82,7 @@ function convertCanvasToImage(canvas) {
     var imageSrc = canvas.toDataURL("image/jpg");
     console.log(imageSrc);
     // image.src = imageSrc;   
-    //console.log(image.attr('src'))
+    console.log(image.attr('src'))
     // return image;
     document.querySelector("body").appendChild(image)
     faceRecognition(imageSrc)
