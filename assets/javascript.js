@@ -82,7 +82,7 @@ function convertCanvasToImage(canvas) {
     var imageSrc = canvas.toDataURL("image/jpg");
     console.log(imageSrc);
     // image.src = imageSrc;   
-    console.log(image.attr('src'))
+    //console.log(image.attr('src'))
     // return image;
     document.querySelector("body").appendChild(image)
     faceRecognition(imageSrc)
