@@ -68,7 +68,7 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
             },
             type: "POST",
             // Request body
-            data: image,
+            data: '{"url" : "http://dreamicus.com/data/face/face-04.jpg"}',
         })
         .done(function(data) {
             alert("success");
