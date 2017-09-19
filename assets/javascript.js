@@ -1,6 +1,7 @@
 // Grab elements, create settings, etc.
 var video = document.getElementById('video');
 var image1;
+var test1;
 // Get access to the camera!
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     // Not adding `{ audio: true }` since we only want video now
@@ -45,7 +46,7 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
 
 
 
- function faceRecognition(image) {
+ function faceRecognition() {
 
       console.log("Image: " + image);
         var params = {
@@ -87,5 +88,6 @@ function convertCanvasToImage(canvas) {
     //console.log(image.attr('src'))
     // return image;
     document.querySelector("body").appendChild(image);
-    faceRecognition(imageSrc);
+    test1 = faceRecognition();
+    console.log(test1);
 }
