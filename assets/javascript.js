@@ -51,13 +51,13 @@ else if(navigator.getUserMedia) { // Standard
 
 
 
-document.getElementById("snap").addEventListener("click", function(snapShot) {
-  canvas = $('canvas');
+$("#snap").on("click", function(snapShot) {
+  canvas = $("canvas");
   canvas.attr("id", "canvas");
   console.log(canvas);
+  $("#canvas-container").append(canvas);
 
-  var context = canvas.getContext('2d');
-    $("#canvas").appendTo("#canvas-container");
+  var context = $("#canvas").getContext('2d');
 
   context.drawImage(video, 0, 0, 640, 480);
 
