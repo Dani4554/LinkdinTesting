@@ -41,6 +41,7 @@ else if(navigator.getUserMedia) { // Standard
 
 
 var canvas = document.getElementById('canvas');
+console.log(canvas);
 var context = canvas.getContext('2d');
 
 
