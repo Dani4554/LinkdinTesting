@@ -50,28 +50,32 @@ else if(navigator.getUserMedia) { // Standard
 
 
 
+var context;
 
 $("#snap").on("click", function(snapShot) {
-  canvas1 = $("<canvas>");
-  canvas1.attr("id", "canvas");
-  $("#canvas-container").append(canvas);
-  canvas = document.getElementById("#canvas");
+  // var canvas1 = $("<canvas>");
+  // canvas1.attr("id", "canvas");
+  // $("#camera-container").append(canvas1);
+  canvas = document.getElementById("canvas");
 
-  var context = canvas.getContext('2d');
+  context = canvas.getContext('2d');
   console.log(context);
 
-  context.drawImage(video, 0, 0, 640, 480);
+  context.drawImage(video, 0, 0, 640, 400);
 
   console.log(snapShot);
   canvas.toBlob(function(blob){
   faceRecognition(blob);
   })
+
+  return context;
 });
 
 document.getElementById("retake").addEventListener("click", function(snapShot) {
   
-  $("#canvas").remove()
- 
+  context.clearRect(0, 0, 650, 400); 
+ // ctx.clearRect(0, 0, 1200, 1000)
+
 
 });
 
