@@ -9,6 +9,13 @@ var neutralNum;
 var sadnessNum;
 var surpriseNum;
 var fearNum;
+
+
+
+
+
+
+
 // Get access to the camera!
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     // Not adding `{ audio: true }` since we only want video now
@@ -52,6 +59,39 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
   faceRecognition(blob);
   })
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  function faceRecognition(imageBlob) {
