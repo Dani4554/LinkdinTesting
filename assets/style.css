@@ -54,6 +54,14 @@ h2 {
     left: 22%;
 }
 
+#canvas{
+    position: absolute;
+    top: 137px;
+    left: 22.3%
+    width: 646;
+    height: 400;
+}
+
 
 
 

@@ -1,5 +1,6 @@
 // Grab elements, create settings, etc.
 var video = document.getElementById('video');
+var canvas;
 var result;
 var angerNum;
 var contemptNum;
@@ -47,11 +48,17 @@ else if(navigator.getUserMedia) { // Standard
 }
 
 
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext('2d');
+
 
 
 document.getElementById("snap").addEventListener("click", function(snapShot) {
+  canvas = $('canvas');
+  canvas.attr("id", "canvas");
+  console.log(canvas);
+
+  var context = canvas.getContext('2d');
+    $("#canvas").appendTo("#canvas-container");
+
   context.drawImage(video, 0, 0, 640, 480);
 
   console.log(snapShot);
@@ -60,6 +67,12 @@ document.getElementById("snap").addEventListener("click", function(snapShot) {
   })
 });
 
+document.getElementById("retake").addEventListener("click", function(snapShot) {
+  
+  $("#canvas").remove()
+ 
+
+});
 
 
 
