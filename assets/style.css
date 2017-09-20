@@ -1,0 +1,60 @@
+#container {
+    width: 980px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #e52222;
+}
+#camera-frame {
+    width: 960px;
+    margin: 0 auto;
+    align-content: center;
+}
+.btn-primary {
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto Condensed";
+    font-size: 18px;
+}
+hr {
+    
+    border: none;
+    height: 3px;
+    color: #ffda49;
+}
+h2 {
+    font-family: "Roboto Condensed";
+    font-size: 40px;
+    
+    }
+#emotion {
+    position: relative;
+    top: 50px;
+}
+#movie {
+    position: relative;
+    top: 150px;
+}
+#food {
+    position: relative;
+    top: 450px;
+}
+#emotion-name {
+    font-family: "Lobster";
+    font-size: 65px;
+    color: #4693db;
+    text-shadow: 2px 2px 3px #fff;
+    position: relative;
+    top: 25px;
+}
+
+#video {
+    position: absolute;
+    top: 137px;
+    left: 22%;
+}
+
+
+
+
+
