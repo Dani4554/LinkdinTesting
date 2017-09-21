@@ -44,12 +44,6 @@ else if(navigator.getUserMedia) { // Standard
 }
 
 
-<<<<<<< HEAD
-var canvas = document.getElementById('canvas');
-console.log(canvas);
-var context = canvas.getContext('2d');
-=======
->>>>>>> test
 
 
 var context;
