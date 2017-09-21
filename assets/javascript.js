@@ -10,11 +10,7 @@ var neutralNum;
 var sadnessNum;
 var surpriseNum;
 var fearNum;
-
-
-
-
-
+var emotion;
 
 
 // Get access to the camera!
@@ -80,6 +76,13 @@ document.getElementById("retake").addEventListener("click", function(snapShot) {
 });
 
 
+$("#redirect").on("click", function(event){
+  // event.preventDefault();
+  console.log(emotion)
+
+  window.location = "index2.html?" + emotion;
+
+})
 
 
 
@@ -88,6 +91,8 @@ document.getElementById("retake").addEventListener("click", function(snapShot) {
 
 
 
+
+// console.log(window.location.origin);
 
 
 
@@ -180,7 +185,10 @@ function processData(){
    && (angerNum>sadnessNum) && (angerNum>surpriseNum)){
 
     console.log("Anger is the biggest: " + angerNum);
-    alert("You are angry");
+    console.log("You are angry");
+
+    emotion = "angry";
+    return emotion;
 
   }
 
@@ -190,7 +198,11 @@ if((happinessNum>contemptNum) && (happinessNum>disgustNum) && (happinessNum>fear
    && (happinessNum>sadnessNum) && (happinessNum>surpriseNum)){
 
     console.log("Happiness is the biggest: " + happinessNum);
-    alert("You are happy");
+    console.log("You are happy");
+
+    // set emtion = to 
+    emotion = "happy";
+    return emotion;
 
   }
 
@@ -198,7 +210,10 @@ if((neutralNum>contemptNum) && (neutralNum>disgustNum) && (neutralNum>fearNum) &
    && (neutralNum>sadnessNum) && (neutralNum>surpriseNum)){
 
     console.log("Anger is the biggest: " + angerNum);
-    alert("You are angry");
+    console.log("You are Angry")
+
+    emotion = "angry";
+    return emotion;
 
   }
 
@@ -206,15 +221,21 @@ if((contemptNum>neutralNum) && (contemptNum>disgustNum) && (contemptNum>fearNum)
     && (contemptNum>angerNum) && (contemptNum>sadnessNum) && (contemptNum>surpriseNum)){
 
     console.log("contempt is the biggest: " + contemptNum);
-    alert("You are contemptious");
+    console.log("You are contemptious");
 
+    emotion = "contempt";
+    return emotion;
+ 
   }
 
 if((disgustNum>contemptNum) && (disgustNum>neutralNum) && (disgustNum>fearNum) && (disgustNum>happinessNum) && (disgustNum>angerNum)
    && (disgustNum>sadnessNum) && (disgustNum>surpriseNum)){
 
     console.log("Disgust is the biggest: " + disgustNum);
-    alert("You are disgusted");
+    console.log("You are disgusted");
+
+    emotion = "disgusted";
+    return emotion;
 
   }   
 
@@ -222,7 +243,10 @@ if((fearNum>contemptNum) && (fearNum>neutralNum) && (fearNum>disgustNum) && (fea
    && (fearNum>sadnessNum) && (fearNum>surpriseNum)){
 
     console.log("Fear is the biggest: " + fearNum);
-    alert("You are fearful");
+    console.log("You are fearful");
+
+    emotion = "fear";
+    return emotion;
 
   }   
 
@@ -230,7 +254,10 @@ if((sadnessNum>contemptNum) && (sadnessNum>neutralNum) && (sadnessNum>disgustNum
   && (sadnessNum>angerNum) && (sadnessNum>fearNum) && (sadnessNum>surpriseNum)){
 
     console.log("Sadness is the biggest: " + sadnessNum);
-    alert("You are sad");
+    console.log("You are sad");
+
+    emotion = "sad";
+    return emotion;
 
   }
 
@@ -238,9 +265,14 @@ if((surpriseNum>contemptNum) && (surpriseNum>neutralNum) && (surpriseNum>disgust
   && (surpriseNum>angerNum) && (surpriseNum>sadnessNum) && (surpriseNum>fearNum)){
 
     console.log("Surprise is the biggest: " + surpriseNum);
-    alert("You are surprised");
+    console.log("You are surprised");
+
+
+    emotion = "surprise";
+    return emotion;
 
   }               
+
 
 }
 

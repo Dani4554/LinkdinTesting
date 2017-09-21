@@ -4,11 +4,13 @@
     margin: 0 auto;
     background-color: #e52222;
 }
+
 #camera-frame {
     width: 960px;
     margin: 0 auto;
     align-content: center;
 }
+
 .btn-primary {
     margin-top: 20px;
     border: none;
@@ -16,56 +18,96 @@
     font-family: "Roboto Condensed";
     font-size: 18px;
 }
+
 hr {
     
     border: none;
-    height: 3px;
-    color: #ffda49;
+    height: 5px;
+    width: 600px;
+    background-color: #fff;
+    opacity: 0.95;
 }
+
 h2 {
     font-family: "Roboto Condensed";
     font-size: 40px;
     
     }
+
 #emotion {
+    position: relative;
+    top: 30px;
+}
+
+#movie {
     position: relative;
     top: 50px;
 }
-#movie {
-    position: relative;
-    top: 150px;
-}
+
 #food {
     position: relative;
-    top: 450px;
+    top: 120px;
 }
+
 #emotion-name {
     font-family: "Lobster";
     font-size: 65px;
     color: #4693db;
     text-shadow: 2px 2px 3px #fff;
     position: relative;
-    top: 25px;
 }
+
+#food-name{
+
+    font-family: "Lobster";
+    font-size: 65px;
+    color: #4693db;
+    text-shadow: 2px 2px 3px #fff;
+    position: relative;
+    top: -36px;
+}
+
+#reset-button{
+    float: right;
+    position: relative;
+    top: 275px;
+    right: 20px;
+}
+
 
 #video {
     position: absolute;
     top: 137px;
-    left: 22%;
+    left: 20%;
+    align-content: center;
 }
 
 #canvas{
     position: absolute;
     top: 137px;
-    left: 22%;
-/*    width: 100%;
-    height: auto;*/
+    left: 26%;
 }
 
-/*#canvas-container {
-    width: 100%;
+#try{
+    position: absolute;
+    bottom: 1090px;
+    left: 26px;
+    height: 81px;
+    width: 136px;
 }
-*/
+
+.title{
+    color: white;
+}
+
+p {
+
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Helvetica;  
+
+}
+
 
 
 
