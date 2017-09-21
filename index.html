@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  
+  <title>Emotion API</title>
+  <link rel="stylesheet" type="text/css" href="assets/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
 </head>
 <body>
 
-<video id="video" width="640" height="480" autoplay></video>
-<button id="snap">Snap Photo</button>
-<canvas id="canvas" width="640" height="480"></canvas>
+ <div id="container">
+    <div id="camera-frame">
+      <img src="assets/film1.png">
+      <video id="video" width="800" height="400" autoplay></video>
 
+      <canvas id="canvas" width="642" height="400"></canvas>
+    </div>  <!-- End of Camera-frame div -->
+
+        <div class="text-center">
+            <button type="button" class="btn-primary" id="snap">Snap a Photo</button>
+            <button type="button" class="btn-primary" id="redirect">Use this photo</button>
+            <button id ="retake" type="button" class="btn-primary">Retake Photo</button>
+        </div>
+        
+  </div>
 
 
 
