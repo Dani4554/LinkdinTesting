@@ -145,7 +145,7 @@ $("#redirect").on("click", function(event){
         })
         .done(function(data) {
             console.log(data);
-            alert("success");
+            //alert("success");
             getData(data);
             processData();
             result = data;
