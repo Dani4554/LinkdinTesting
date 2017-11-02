@@ -135,7 +135,7 @@ $("#redirect").on("click", function(event){
                 xhrObj.setRequestHeader("Content-Type","application/octet-stream");
 
                 // NOTE: Replace the "Ocp-Apim-Subscription-Key" value with a valid subscription key.
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","c1b9625c10a544cc9ff07f21be4238ca");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","6b36e80dd6c6414a8a8df1c803511a13");
             },
             type: "POST",
 
